@@ -3,9 +3,9 @@ FROM node:alpine
 WORKDIR /app
 
 COPY package.json .
-COPY package-lock.json .
-COPY . . 
+# COPY package-lock.json .
+COPY . ./ 
 
-RUN npm i 
+RUN npm install 
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
